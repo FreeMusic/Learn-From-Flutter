@@ -92,7 +92,7 @@ class UnFlexibleRow extends StatelessWidget {
     // TODO: implement build
     return Row(
       //水平轴的布局方式
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       //文本方向
       textDirection: TextDirection.ltr,
       children: <Widget>[
@@ -106,6 +106,7 @@ class UnFlexibleRow extends StatelessWidget {
         new RaisedButton(
           onPressed: () {
             print('黄色按钮的点击事件');
+            debugPrint('黄色按钮的点击事件');
           },
           color: Colors.orangeAccent,
           child: new Text('黄色按钮'),
