@@ -95,28 +95,29 @@ class MoreStack extends StatelessWidget {
     // TODO: implement build
     return Center(
       child: Stack(
-//        alignment: AlignmentDirectional.center,
+        alignment: AlignmentDirectional.center,
+        fit: StackFit.passthrough,
+        overflow: Overflow.clip,
         children: <Widget>[
-
-          new CircleAvatar(
+          new Positioned(
+            child: new CircleAvatar(
             backgroundImage: new NetworkImage('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1589092390390&di=4546445aafe1ac79511e4f8d28f2439a&imgtype=0&src=http%3A%2F%2Fgss0.baidu.com%2F94o3dSag_xI4khGko9WTAnF6hhy%2Fzhidao%2Fpic%2Fitem%2Fa8ec8a13632762d00f79bcc4a7ec08fa513dc602.jpg'),
             radius: 100,
+          ),
+            width: 200,
+            height: 200,
           ),
           new Positioned(
             child: new Text('我是少司命', style: TextStyle(color: Colors.red),),
             top: 10,
             right: 50,
           ),
-          Row(
-//            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('我是少司命', style: TextStyle(color: Colors.red),),
-            ],
-          ),
+
           new Positioned(
             child: RaisedButton(onPressed: (){},
               child: Text('秦时明月'),
               color: Colors.green,
+
             ),
 
             bottom: 20,

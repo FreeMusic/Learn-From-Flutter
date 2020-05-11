@@ -27,18 +27,20 @@ class RouteButton extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return RaisedButton(
-      onPressed: (){
+      onPressed: () {
         _navigateToXiaoJieJie(context);
       },
+      child: Text("下一步按钮"),
     );
   }
 
-  _navigateToXiaoJieJie(BuildContext context) async{//启用异步方法
+  _navigateToXiaoJieJie(BuildContext context) async {
+    //启用异步方法
 
-    final result = await Navigator.push(//等待
+    final result = await Navigator.push(
+        //等待
         context,
-        MaterialPageRoute(builder: (context)=> XiaoJieJie())
-    );
+        MaterialPageRoute(builder: (context) => XiaoJieJie()));
     //SnackBar的使用 SnackBar是用户操作后，显示提示信息的一个控件，类似Tost，会自动隐藏。
     //SnackBar是以Scaffold的showSnackBar方法来进行的
     Scaffold.of(context).showSnackBar(SnackBar(content: Text('$result')));
@@ -59,13 +61,13 @@ class XiaoJieJie extends StatelessWidget {
           children: <Widget>[
             RaisedButton(
               child: Text('大长腿小姐姐'),
-              onPressed: (){
+              onPressed: () {
                 Navigator.pop(context, '大长腿：15734569078');
               },
             ),
             RaisedButton(
               child: Text('小蛮腰小姐姐'),
-              onPressed: (){
+              onPressed: () {
                 Navigator.pop(context, '小蛮腰：17845692301');
               },
             ),

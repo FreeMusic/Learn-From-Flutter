@@ -39,9 +39,9 @@ class StartPage extends StatelessWidget {
             //缩放路由动画
 //            Navigator.push(context, ScaleRouter(EndPage()));
             //旋转加缩放路由动画
-//            Navigator.push(context, RotateScaleRouter(EndPage()));
+            Navigator.push(context, RotateScaleRouter(EndPage()));
             //左右滑动路由动画
-            Navigator.push(context, SlidingRouter(EndPage()));
+//            Navigator.push(context, SlidingRouter(EndPage()));
           },
         ),
       ),
