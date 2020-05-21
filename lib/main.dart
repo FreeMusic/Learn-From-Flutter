@@ -57,6 +57,7 @@ var titlelist = [
   Knowledge('Draggable控件实例', YQDraggable()),
   Knowledge('带轮播图的上下拉刷新', SwiperRefreshPage()),
   Knowledge('flutter_tableview 列表标题栏悬停效果', TableViewPage()),
+  Knowledge('Flutter主动调用iOS的原生方法', FlutterActiveiOS()),
 ];
 
 //主函数的入口

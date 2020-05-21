@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/UtilClass/MethodNameClass.dart';
 import 'package:flutter_tableview/flutter_tableview.dart';
 
 /*
@@ -77,4 +78,38 @@ class TableViewPageState extends State<TableViewPage> {
       ),
     );
   }
+}
+
+/*Flutter主动调用iOS的原生方法*/
+class FlutterActiveiOS extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Center(
+        /*按钮的垂直布局*/
+        child: ButtonColumn(),
+      ),
+    );
+  }
+
+  /*按钮的垂直布局*/
+  ButtonColumn() {
+    return Column(
+      children: <Widget>[
+        new RaisedButton(
+          onPressed: () {
+            CalliOSMethodClass.getInstans().callMethodWithName(MethondName.calliOSAlert);
+          },
+          child: Text('调用iOS提示框'),
+        ),
+        new RaisedButton(
+            onPressed: (){
+              CalliOSMethodClass.getInstans().callMethodWithName(MethondName.pushNewViewController);
+            },
+          child: Text('跳转iOS原生页面'),
+        ),
+      ],
+    );
+  }
+
 }
